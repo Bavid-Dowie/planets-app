@@ -11,36 +11,34 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      
+
       planetList: [],
-      
+
     }
     this.getPlanetNames = this.getPlanetNames.bind(this)
   }
   componentDidMount() {
     this.getPlanetNames()
   }
-  
+
   getPlanetNames() {
     fetch('https://wdi-nyc-planets-api.herokuapp.com/planets')
-    .then(response =>  response.json())
-    .then(planetData => {
-      this.setState({ 
-        list: planetData.planets 
+      .then(response => response.json())
+      .then(planetData => {
+        this.setState({
+          list: planetData.planets
+        })
+        console.log(planetData.planets)
       })
-        console.log(planetData)
-    })
-  }
-
-
-
-
-
-  render() {
-    return (
-      <div className="App">
+    }
+    
+    render() {
+      
+      
+      return (
+        <div className="App">
         <nav>
-          <ul>
+          <ul className="mainNav">
             <li><Link to="/">Welcome</Link></li>
             <li><Link to="/planetList">PlanetList</Link></li>
             <li><Link to="/randomPlanet">RandomPlanet</Link></li>

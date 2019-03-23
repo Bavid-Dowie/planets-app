@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-header {
@@ -11,6 +11,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+ul  {
+  list-style-type: none;
+}
+
+
+a  {
+  text-decoration: none;
+  color: #796205
 }
 
 .App-link {
